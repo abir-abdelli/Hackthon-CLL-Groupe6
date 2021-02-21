@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+:root{
+    --dark: rgb(14, 13, 13);
+    --light: rgb(153, 149, 149);
+    --border: #dee2e6;
+    --border-btn: #edf2f4;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+
+}
+a{
+    text-decoration: :none;
+   font-family:'PT Sans', sans-serif; 
+}
+.container{
+    max-width:1024px;
+    margin:auto;
+}
+table{
+    border-spacing: 0px;
+    width: 100%;
+}
+
+.table td, .table th{
+    padding: .75em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.table td > a.btn{
+    padding: .3em 1em;
+    font-size: 1.1em;
+    margin: 0 .2em;
+}
+
+.table tr:hover{
+    background-color:#06d6a0 ;
+}
+
+.table tr:hover td > a{
+    box-shadow: none;
+}
+
+.table .thead-dark th{
+    color: #fff;
+    background-color: var(--dark) ;
+    border-color: #32383e;
+}
