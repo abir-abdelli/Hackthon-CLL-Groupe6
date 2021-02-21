@@ -14,6 +14,7 @@ var keysRouter = require('./routes/keys');
 var loginRouter = require('./routes/signin');
 var signUpRouter = require('./routes/sign-up');
 var home = require('./routes/inex');
+var bookingMat = require('./routes/book');
 
 
 
@@ -29,7 +30,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/keys', keysRouter);
+app.use('/keys', bookingMat);
+app.use('/book', );
 app.use('/', loginRouter);
 app.use('/home', home);
 app.use('/sign-up', signUpRouter);
