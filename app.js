@@ -11,7 +11,9 @@ var usersRouter = require('./routes/users');
 var meetingsRouter = require('./routes/meetings');
 var materialsRouter = require('./routes/materials');
 var keysRouter = require('./routes/keys');
-
+var loginRouter = require('./routes/signin');
+var signUpRouter = require('./routes/sign-up');
+var home = require('./routes/inex');
 
 
 
@@ -28,6 +30,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/keys', keysRouter);
+app.use('/', loginRouter);
+app.use('/home', home);
+app.use('/sign-up', signUpRouter);
 app.use('/meetings', meetingsRouter);
 app.use('/materials', materialsRouter);
 app.use('/members', membersRouter);
